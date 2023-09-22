@@ -28,9 +28,9 @@ export const RightSideContainer = styled.div`
   width: 250px;
 `
 
-export const ThemeIcon = styled.div`
-  height: 150px;
-  border: 2px solid red;
+export const ThemeIconButton = styled.button`
+  border: none;
+  background-color: transparent;
 `
 
 export const ProfileIcon = styled.img`
@@ -47,4 +47,42 @@ export const LogOutBtn = styled.button`
   font-weight: bold;
   cursor: pointer;
   outline: none;
+`
+export const LogOutDark = styled(LogOutBtn)`
+  color: #ffffff;
+  border: 1px solid #ffffff;
+`
+export const PopupContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => (props.isDarkTheme ? '#ffffff' : '#313131')};
+  border-radius: 8px;
+  padding: 20px;
+`
+export const Para = styled.p`
+  font-family: 'Roboto';
+  color: ${props => (props.isDarkTheme ? 'black' : '#ffffff')};
+  margin-bottom: 15px;
+`
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const CancelButton = styled.button`
+  font-family: 'Roboto';
+  border: 1px solid ${props => (props.isDarkTheme ? 'black' : '#ffffff')};
+  padding: 10px;
+  border-radius: 8px;
+  color: ${props => (props.isDarkTheme ? 'black' : '#ffffff')};
+  background-color: transparent;
+  margin-right: 10px;
+`
+
+export const ConfirmButton = styled(CancelButton)`
+  background-color: #3b82f6;
 `
